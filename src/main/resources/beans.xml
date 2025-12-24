@@ -7,7 +7,9 @@
     <!-- bean definitions here -->
     <bean id="Sample"
           name="Sample"
-          class ="com.Jspider.springs.demo.Sample"/>
+          class ="com.Jspider.springs.demo.Sample"
+
+    />
 
     <bean id="contact"
           name="contact"
@@ -18,9 +20,17 @@
 
     <bean id="employee"
           name="employee"
-          class="com.Jspider.springs.demo.Employee">
+          class="com.Jspider.springs.demo.Employee"
+          scope="prototype"
+    >
         <constructor-arg ref = "contact"/>
-        <constructor-arg ref = "address"/>
+<!--        <constructor-arg ref = "address"/>-->
+
+        <property name="id" value="100"/>
+        <property name="name" value="Srini"/>
+        <property name="salary" value="120000"/>
+
+        <property name="address" ref="address"/>
 
     </bean>
 

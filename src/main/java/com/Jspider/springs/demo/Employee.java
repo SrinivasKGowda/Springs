@@ -9,12 +9,16 @@ public class Employee
     private Address address;
 
     //Injecting dependency in Constructor
-
-    public Employee(ContactInfo cantact,Address address)
+//
+    public Employee(ContactInfo cantact)
     {
         this.cantact = cantact;
-        this.address = address;
     }
+//    public Employee(ContactInfo cantact,Address address)
+//    {
+//        this.cantact = cantact;
+//        this.address = address;
+//    }
 
 //    public Employee (Address address)
 //    {
